@@ -26,7 +26,6 @@ public class DoubleDirectReceiver {
         theme = scanner.nextLine();
 
         channel.queueBind(queueName, EXCHANGE_NAME, theme);
-//        channel.queueBind(queueName, EXCHANGE_NAME, "java");
 
         System.out.println(" [*] Waiting for messages");
 
