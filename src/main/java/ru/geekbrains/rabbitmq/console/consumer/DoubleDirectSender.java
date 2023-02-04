@@ -24,8 +24,6 @@ public class DoubleDirectSender {
                 message = scanner.nextLine();
                 String[] value = message.split(" ", 2);
                 channel.basicPublish(EXCHANGE_NAME, value[0], null, value[1].getBytes("UTF-8"));
-//                channel.basicPublish(EXCHANGE_NAME, "c++", null, "c++ msg".getBytes("UTF-8"));
-//                channel.basicPublish(EXCHANGE_NAME, "java", null, "java msg".getBytes("UTF-8"));
             } while (exitCondition());
         }
     }
